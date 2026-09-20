@@ -1,8 +1,13 @@
+#workflow name
 name: hello
 
+#trigger
 on:
  push:
   branches: [main]
+  #triger when comit on below file
+  paths: 
+   - '**.html'
 
 jobs:
  greet:
