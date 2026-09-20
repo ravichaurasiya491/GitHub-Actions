@@ -1,7 +1,17 @@
 name: CICD
 
 on:
- workflow_dispatch
+ workflow_dispatch:
+  inputs:
+   env:
+    description: choose the environment
+    default: 'dev'
+    required: true
+    type: choice
+    options:
+     - prod
+     - dev
+     - Uat
 
 jobs:
  build:
