@@ -26,6 +26,7 @@ jobs:
    - name: test the code
      run: echo "code is tested"
  deploy:
+  if: inputs.env == 'dev'
   needs: [build,test]
   runs-on: ubuntu-latest
   steps:
