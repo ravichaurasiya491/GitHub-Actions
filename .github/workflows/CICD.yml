@@ -1,0 +1,29 @@
+name: CICD
+
+on:
+ workflow_dispatch
+
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - name: build the code
+     run: echo "code is build"
+ test:
+  needs: [build]
+  runs-on: ubuntu-latest
+  steps:
+   - name: test the code
+     run: echo "code is tested"
+ deploy:
+  needs: [build,test]
+  runs-on: ubuntu-latest
+  steps:
+   - name: deploy the code
+     run: echo "code is deployed"
+     
+     
+
+     
+    
+ 
