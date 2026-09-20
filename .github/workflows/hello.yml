@@ -13,4 +13,11 @@ jobs:
 
     - name: say hello to usernames
       run: echo "hello $USER"
+
+ details:
+  runs-on: ubuntu-latest
+  steps:
+   - name: publish details of docker and pyhton version
+     run: docker --version && python --version
+      
      
